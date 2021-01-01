@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * strlen - inorder to find the length of a string
+ * _strlen - inorder to find the length of a string
  * @s: the string to be counted
  * Return: the length of the string
  */
-int strlen(char *s)
+int _strlen(char *s)
 {
 	int n;
 
