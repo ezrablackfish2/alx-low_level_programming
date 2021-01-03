@@ -22,6 +22,5 @@ char *string_toupper(char *str)
 		}
 		k++;
 	}
-	str[i] = '\0';
 	return (str);
 }
