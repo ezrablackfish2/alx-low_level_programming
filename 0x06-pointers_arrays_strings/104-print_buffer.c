@@ -1,45 +1,51 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
- * print_buffer - Prints a buffer 10 bytes at a time, starting with
- *                the byte position, then showing the hex content,
- *                then displaying printable charcaters.
- * @b: The buffer to be printed.
- * @size: The number of bytes to be printed from the buffer.
+ * print_buffer - Prints a buffer
+ * @b: char
+ * @size: int
+ * Return:void
  */
-
 void print_buffer(char *b, int size)
 {
-	int byte, index;
+	int x, i;
 
-	for (byte = 0; byte < size; byte += 10)
+	for (x = 0; x < size; x += 10)
 	{
-		printf("%08x: ", byte);
+		printf("%08x: ", x);
 
-		for (index = 0; index < 10; index++)
+		for (i = 0; i < 10; i++)
 		{
-			if ((index + byte) >= size)
+			if ((i + x) >= size)
 				printf("  ");
+
 			else
-				printf("%02x", *(b + index + byte));
-			if ((index % 2) != 0 && index != 0)
+				printf("%02x", *(b + i + x));
+
+			if ((i % 2) != 0 && i != 0)
 				printf(" ");
 		}
-		for (index = 0; index < 10; index++)
+
+		for (i = 0; i < 10; i++)
 		{
-			if ((index + byte) >= size)
+			if ((i + x) >= size)
 				break;
-			else if (*(b + index + byte) >= 31 &&
-				 *(b + index + byte) <= 126)
-				printf("%c", *(b + index + byte));
+
+			else if (*(b + i + x) >= 31 &&
+				 *(b + i + x) <= 126)
+				printf("%c", *(b + i + x));
+
 			else
 				printf(".");
 		}
-		if (byte >= size)
+
+		if (x >= size)
 			continue;
+
 		printf("\n");
 	}
+
 	if (size <= 0)
 		printf("\n");
 }
