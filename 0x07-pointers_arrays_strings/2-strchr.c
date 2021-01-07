@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * *_strchr - locates a character required in a given string
  * @s: the string given
@@ -19,7 +18,7 @@ char *_strchr(char *s, char c)
 	}
 	if (s[i] == '\0')
 	{
-		return (NULL);
+		return ('\0');
 	}
 	return (s);
 }
