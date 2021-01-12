@@ -1,21 +1,12 @@
 #include "main.h"
+
 /**
- * _isalpha - checks whether all are alphabetic or not
- * @c: is character to be checked
- * Return: 1 and 0
+ * _isalpha - checks for alphabetic character
+ * @c: the character to be checked
+ * Return: 1 if c is a letter, 0 otherwise
  */
 int _isalpha(int c)
 {
-	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	int i = 0;
-
-	while (i < 52)
-	{
-		if (c == alphabet[i])
-		{
-			return (1);
-		}
-		i++;
-	}
-	return (0);
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
+
