@@ -14,6 +14,11 @@ char *_strdup(char *str)
 	{
 	}
 	arr = (char *) malloc(sizeof(char) * (i + 1));
+	if (arr == NULL)
+	{
+		printf("failed to allocate memory\n");
+		return (1);
+	}
 	for (j = 0; j < i; j++)
 	{
 		arr[j] = str[j];
