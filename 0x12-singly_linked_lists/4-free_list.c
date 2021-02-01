@@ -2,7 +2,6 @@
 
 /**
  * free_list - frees the list of the node
- * @list_t: is the list to be freed
  * @head: the first node
  * Return: nothing
  */
