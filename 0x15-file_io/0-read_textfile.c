@@ -2,7 +2,7 @@
 
 /**
  * read_textfile - reades first the text file then prints it
- * @fiename: is the file name that is used and given to you
+ * @filename: is the file name that is used and given to you
  * @letters: is the number of letter it should read
  * Return: the number of letters
  */
