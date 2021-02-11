@@ -56,10 +56,9 @@ int main(int argc,char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
 	}
-
 	space = create_space(argv[2]);
 	initial = open(argv[1], O_RDONLY);
 	rea = read(initial, space, 1024);
