@@ -9,16 +9,28 @@
 
 int create_file(const char *filename, char *text_content)
 {
+	int ope, wri, l = 0;
+
 	if (filename == NULL)
 	{
 		return (-1);
 	}
-	open(filename, O_RDWR);
-	if (text_content == NULL)
+	if (text_content != NULL)
 	{
-		write(STDOUT_FILENO, filename, *text_content);
-		return (1);
+		for (l = 0; text_content[l];)
+		{
+			len++;
+		}
+
+	ope = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	wri = write(ope, text_content, l);
+
+	if (ope == -1 || wri == -1)
+	{
+		return (-1);
 	}
-	write(STDOUT_FILENO, filename, *text_content);
+
+	close (ope);
+
 	return (1);
 }
