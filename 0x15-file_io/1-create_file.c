@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * create_file - copies content of one file to another
- * @*filename: is the name of ile to be copied
- * @*text_content: the copy to be text
+ * @filename: is the name of ile to be copied
+ * @text_content: the copy to be text
  * Return: 1 success -1 failure
  */
 int create_file(const char *filename, char *text_content)
