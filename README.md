@@ -1,2 +1,2 @@
 # alx-low_level_programming
-To learn C in low level programming
+i am going to be using C as a low level
