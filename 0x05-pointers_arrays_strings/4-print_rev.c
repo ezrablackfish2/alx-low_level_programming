@@ -1,4 +1,4 @@
-#incldue "main.h"
+#include "main.h"
 /**
  * print_rev - prints string in reverse order
  * @s: is the string to be reversed
@@ -10,9 +10,9 @@ void print_rev(char *s)
 
 	for (i = 0; *s != '\0'; s++)
 	{
-		i++
+		i++;
 	}
-	for (i; i >= 0; i--)
+	for (i >= 0; i--)
 	{
 		_putchar(s[i]);
 	}
