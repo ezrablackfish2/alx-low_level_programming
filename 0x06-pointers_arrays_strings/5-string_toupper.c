@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * string_toupper - converts the string to upper
- * str: character to be converted
+ * @str: character to be converted
  * Return: character
  */
 char *string_toupper(char *str)
@@ -22,5 +22,6 @@ char *string_toupper(char *str)
 		}
 		k++;
 	}
+	str[i] = '\0';
 	return (str);
 }
