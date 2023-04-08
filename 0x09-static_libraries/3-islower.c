@@ -1,21 +1,12 @@
 #include "main.h"
+
 /**
- * _islower - tries to identify the lower case letter alphabet
- * @c: a character to be checked
- * Return: 1 and 0 on certain condition
+ * _islower - checks for lowercase character
+ * @c: the character to check
+ * Return: 1 if c is lowercase, 0 otherwise
  */
 int _islower(int c)
 {
-	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
-	int i = 0;
-
-	while (i < 26)
-	{
-		if  (c == alphabet[i])
-		{
-			return (1);
-		}
-		i++;
-	}
-	return (0);
+	return (c >= 'a' && c <= 'z');
 }
+

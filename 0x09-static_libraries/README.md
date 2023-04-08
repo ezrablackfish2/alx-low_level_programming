@@ -1,1 +1,1 @@
-we are going to learn C with functions and arrays and nested loops
+in here we are going to make a static library

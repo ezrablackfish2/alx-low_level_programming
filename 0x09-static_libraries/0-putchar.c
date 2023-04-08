@@ -1,16 +1,15 @@
-#include "main.h"
-/**
- * main - to return the string _putchar with out using standard library
- * Return: zero (0)
- */
-int main(void)
-{
-	char *h = "_putchar\n";
+#include <unistd.h>
 
-	while (*h)
-	{
-		_putchar(*h);
-		h++;
-	}
-	return (0);
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
+
