@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 /**
  * *_strdup - copies the string value to a new given string value
  * @str: the string to be copied
@@ -16,8 +17,7 @@ char *_strdup(char *str)
 	arr = (char *) malloc(sizeof(char) * (i + 1));
 	if (arr == NULL)
 	{
-		printf("failed to allocate memory\n");
-		return (1);
+		return (NULL);
 	}
 	for (j = 0; j < i; j++)
 	{
