@@ -19,6 +19,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_start(vivian, n);
 	for (i = 0; i < n; i++)
 	{
+		if (!(va_arg(vivian, char *)))
+		{
+			va_arg(vivian, char *) == "(nil)";
+		}
 		if (!(separator))
 		{
 			printf("%s", va_arg(vivian, char *));
@@ -31,8 +35,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf(", %s", va_arg(vivian, char *));
 		}
-		va_end(vivian);
 	}
+	va_end(vivian);
 
 	printf("\n");
 }
