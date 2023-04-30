@@ -1,17 +1,17 @@
 #include "lists.h"
 
-
 static listint_t *new_node(const int n);
+
 /**
- * add_nodeint_end - add a node to the end of a list.
- * @head: pointer of apointer to the head of a list.
- * @n: number value to set the new node to.
+ * add_nodeint - add a node at the head of a list.
+ * @head : pointer of a pointer to a list.
+ * @n : value to set the new list to.
  *
- * Return: pointer to the head of a list.
+ * Return: pointer to a pointer of listint_t
  */
-listint_t *add_nodeint_end(listint_t **head, const int n)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *new, *temp;
+	listint_t *new;
 
 	if (!(*head))
 	{
@@ -19,17 +19,9 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		return (*head);
 	}
 
-	temp = *head;
-	while (temp)
-	{
-		if (!temp->next)
-		{
-			new = new_node(n);
-			temp->next = new;
-			break;
-		}
-		temp = temp->next;
-	}
+	new = new_node(n);
+	new->next = *head;
+	*head = new;
 	return (*head);
 }
 
