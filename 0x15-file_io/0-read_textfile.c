@@ -9,7 +9,7 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize ope, rea, wri;
+	ssize_t ope, rea, wri;
 	char *space;
 
 	if (filename == NULL)
@@ -24,9 +24,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	ope = open(filename, O_RDONLY);
 	rea = read(ope, space, letters);
-	wri - write(STDOUT_FILENO, space, rea);
+	wri = write(STDOUT_FILENO, space, rea);
 
-	if (ope == -1, || rea == -1 || wri == -1 || wri != rea)
+	if (ope == -1 || rea == -1 || wri == -1 || wri != rea)
 	{
 		free(space);
 		return (0);
