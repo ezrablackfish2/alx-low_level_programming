@@ -55,6 +55,7 @@ int main(int argc,char *argv[])
 	char *space;
 
 	if (argc != 3)
+	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
@@ -69,7 +70,7 @@ int main(int argc,char *argv[])
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]);
-			free(buffer);
+			free(space);
 			exit(98);
 		}
 
@@ -78,7 +79,7 @@ int main(int argc,char *argv[])
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", argv[2]);
-			free(buffer);
+			free(space);
 			exit(99);
 		}
 
@@ -87,7 +88,7 @@ int main(int argc,char *argv[])
 
 	} while (rea > 0);
 
-	free (space);
+	free(space);
 	close_file(initial);
 	close_file(final);
 
