@@ -46,10 +46,10 @@ void  close_file(int fd)
  * main - copies the content of a file to another file
  * @argc: the number of arguments supplied to program
  * @argv: an array of pointers to the argument
- * Return 0 on succes
+ * Return: 0 on succes
  */
 
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
 	int initial, final, rea, wri;
 	char *space;
