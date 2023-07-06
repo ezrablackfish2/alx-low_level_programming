@@ -18,7 +18,7 @@ unsigned int binary_to_uint(const char *str)
 	{
 		if (str[o] < '0' || str[o] > '1')
 			return (0);
-		dec = 2 * dec + (str[i] - '0');
+		dec = 2 * dec + (str[o] - '0');
 	}
 
 	return (dec);
