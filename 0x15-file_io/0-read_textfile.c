@@ -5,7 +5,7 @@
  * @letters: the length of letters the function should read
  * Return: the number of letters printed or failure 0
  */
-size_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int filed;
 	char *buffer;
@@ -16,7 +16,7 @@ size_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	filed = open(filename, O_RONLY);
+	filed = open(filename, O_RDONLY);
 	if (filed < 0)
 	{
 		return (0);
