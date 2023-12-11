@@ -6,6 +6,7 @@ int linear_search(int *array, size_t size, int value) {
 		if (array[i] == value) {
 			return i;
 		}
+		printf("Value checked at array[%ld] = [%d]\n",i, array[i]);
 	}
 	i = -1;
 	return i;
